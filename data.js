@@ -1,0 +1,1 @@
+export default {"/**\n * 666\n *\n * @export\n * @param {*} a\n * @param {*} b\n * @returns\n */":"function add(a, b) {\n    return a + b\n}","/**\n * 777\n *\n * @export\n * @param {*} a\n * @param {*} b\n * @returns\n */":"function add(a, b) {\n    return a + b\n}"}

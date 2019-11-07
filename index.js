@@ -1,8 +1,14 @@
-import React from 'react'
+import React, {useState} from 'react'
 import ReactDOM from 'react-dom'
-import Demo from './code/index.js'
+import data from './data'
+
+
+const App = () => {
+    
+}
+
 
 ReactDOM.render(
-    <Demo />,
+    <h1>123</h1>,
     document.getElementById('app')
 );

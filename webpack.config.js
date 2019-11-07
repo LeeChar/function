@@ -23,8 +23,7 @@ module.exports = {
     },
     devServer: {
         contentBase: resolve('./index.html'),
-        compress:true,
-        port:3000,
+        compress:true
     },
     plugins: [
         new HtmlWebpackPlugin({
