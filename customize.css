@@ -1,4 +1,5 @@
 body{
+	min-width: 300px;
 	width: 30vw;
 	margin: 0 auto;
 }
@@ -8,7 +9,7 @@ pre{
 }
 
 code{
-	
+	letter-spacing: 1px;
 	border-radius: 5px;
 	font-family: -webkit-body;
 	overflow-x: scroll;

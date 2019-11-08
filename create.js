@@ -11,22 +11,22 @@ const funcReg = /function[\s\S]+?\}/g;
     const com = [];
     const func = [];
 
-    const content = await readFile(target, 'utf-8')
+    const content = await readFile(target, 'utf-8');
 
     content.replace(comReg, code => {
-        com.push(code)
-    })
+        com.push(code);
+    });
 
     content.replace(funcReg, code => {
-        func.push(code)
-    })
+        func.push(code);
+    });
 
     const result = func.reduce((pre, next, i) => {
         pre.push(com[i] + '-' + next);
         return pre;
     }, []);
 
-    const finalResult = `export default ${JSON.stringify(result)};`
+    const finalResult = `export default ${JSON.stringify(result)};`;
 
-    await writeFile(resolve('./data.js'), finalResult)
-})()
+    await writeFile(resolve('./data.js'), finalResult);
+})();
