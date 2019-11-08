@@ -18,6 +18,10 @@ module.exports = {
             {
                 test: /\.mdx$/,
                 use: 'mdx-loader'
+            },
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader']
             }
         ]
     },
