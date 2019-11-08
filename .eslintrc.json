@@ -1,0 +1,13 @@
+{
+  "parser": "babel-eslint", // 支持解析 es6 语法校验
+  "rules": {
+    "semi": [ // 结尾分号控制
+      "error",
+      "always" // 必须加分号
+    ],
+    "quotes": [ // 引号控制
+      "error",
+      "single" // 必须是单引号
+    ]
+  }
+}

@@ -26,7 +26,7 @@ const funcReg = /function[\s\S]+?\}/g;
         return pre;
     }, []);
 
-    const finalResult = `export default ${JSON.stringify(result)}`
+    const finalResult = `export default ${JSON.stringify(result)};`
 
     await writeFile(resolve('./data.js'), finalResult)
 })()

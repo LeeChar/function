@@ -1,3 +1,15 @@
+body{
+	width: 30vw;
+	margin: 0 auto;
+}
+
+pre{
+	position: relative;
+}
+
 code{
+	
+	border-radius: 5px;
 	font-family: -webkit-body;
+	overflow-x: scroll;
 }

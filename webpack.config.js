@@ -1,6 +1,7 @@
 const path = require('path')
 const resolve = (...filePath) => path.resolve(__dirname, ...filePath)
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const webpack = require('webpack')
 
 module.exports = {
     entry: resolve('./index.js'),
@@ -10,14 +11,11 @@ module.exports = {
     },
     devtool: 'source-map',
     module: {
-        rules: [
+        rules: [ 
             {
                 test: /\.js$/,
-                use: 'babel-loader'
-            },
-            {
-                test: /\.mdx$/,
-                use: 'mdx-loader'
+                use: ['babel-loader', 'eslint-loader'],
+                exclude: resolve('node_modules')
             },
             {
                 test: /\.css$/,
@@ -32,6 +30,17 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: resolve('./index.html')
-        })
+        }),
+        new webpack.LoaderOptionsPlugin({
+        options: {
+            noparse: /jquery/,
+            eslint: {
+                configFile: resolve('.eslintrc.json'),
+                failOnWarning: true,
+                failOnError: false,
+                cache: true
+            }
+        }
+      })
     ]
 }
