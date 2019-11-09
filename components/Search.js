@@ -2,25 +2,19 @@ import React from 'react';
 
 export default props => {
   const { data,filterData } = props;
-
   const inputEle = React.createRef();
+  const result = [];
 
   const onKeyUp = e => {
     const keyWord = inputEle.current.value;
-    const reg = new RegExp(keyWord, 'g');
-
-    const result = [];
-    const regTarget = [];
+    const reg = new RegExp(keyWord, 'ig');
+    if (keyWord === '') return filterData([]);
     data.forEach(item => {
-      const target = `<span>${keyWord}</span>`;
-      regTarget.push({
-        tagName: 'span',
-        content: keyWord
-      });
-      result.push(item.replace(reg, target));
+      if (reg.test(item)) {
+        result.push(item);
+      }
     });
-    
-    filterData(result, regTarget);
+    filterData(result);
   };
 
   const { className } = props;

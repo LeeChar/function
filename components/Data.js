@@ -19,8 +19,10 @@ const copySuccess = () => {
     position: 'fixed',
     top: 20,
     opacity: 0,
-    left: '50%',
+    left: 100,
     transform: 'translate(-50%, 0)',
+    border: '1px solid #ddd',
+    boxShadow: '0 0 10px #d2c5c5',
     textAlign: 'center'
   }).animate({
     opacity: 1
@@ -39,23 +41,16 @@ const copySuccess = () => {
 };
 
 export default props => {
-  const { data, className, regTarget } = props;
+  const { data, className } = props;
 
   const setColor = () => {
     document.querySelectorAll('pre code').forEach((block) => {
       hljs.highlightBlock(block);
     });
   };
-    
-
-  const setActive = () => {
-  };
-
-  document.addEventListener('DOMContentLoaded', setColor);
 
   useEffect(() => {
     setColor();
-    setActive();
     $('pre').each((i, item) => {
       const copyEle = $(copyBtn).css({
         position: 'absolute',

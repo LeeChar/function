@@ -1,6 +1,6 @@
 
 /**
- * 666
+ * 求和
  *
  * @export
  * @param {*} a
@@ -14,13 +14,13 @@ export function add(a, b) {
 }
 
 /**
- * 777
+ * 求差
  *
  * @export
  * @param {*} a
  * @param {*} b
  * @returns
  */
-export function add1(a, b) {
+export function cdd(a, b) {
   return a + b;
 }

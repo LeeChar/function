@@ -7,16 +7,15 @@ import './index.css';
 
 const App = () => {
   const [finalData, setFinalData] = useState([]);
-  const [regTarget, setRegTarget] = useState([]);
   
   const filterData = (v, regTarget) => {
     setFinalData(v);
-    setRegTarget(regTarget);
   };
 
   return <div className='container'>
+    <h1 style={{textAlign: 'center'}}>函数方法搜索</h1>
     <Search className='search' data={data} filterData={filterData} />
-    <Data className='data' data={finalData} regTarget={regTarget} />
+    <Data className='data' data={finalData} />
   </div>;
 };
 
