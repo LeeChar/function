@@ -7,14 +7,16 @@ import './index.css';
 
 const App = () => {
   const [finalData, setFinalData] = useState([]);
+  const [regTarget, setRegTarget] = useState([]);
   
-  const filterData = v => {
+  const filterData = (v, regTarget) => {
     setFinalData(v);
+    setRegTarget(regTarget);
   };
 
   return <div className='container'>
-    <Search className='search' data={data} />
-    <Data className='data' data={finalData} />
+    <Search className='search' data={data} filterData={filterData} />
+    <Data className='data' data={finalData} regTarget={regTarget} />
   </div>;
 };
 

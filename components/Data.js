@@ -39,14 +39,23 @@ const copySuccess = () => {
 };
 
 export default props => {
-  const { data, className } = props;
-  document.addEventListener('DOMContentLoaded', (event) => {
+  const { data, className, regTarget } = props;
+
+  const setColor = () => {
     document.querySelectorAll('pre code').forEach((block) => {
       hljs.highlightBlock(block);
     });
-  });
+  };
+    
+
+  const setActive = () => {
+  };
+
+  document.addEventListener('DOMContentLoaded', setColor);
 
   useEffect(() => {
+    setColor();
+    setActive();
     $('pre').each((i, item) => {
       const copyEle = $(copyBtn).css({
         position: 'absolute',
@@ -70,7 +79,7 @@ export default props => {
       e.clearSelection();
     });
 
-  }, []);
+  }, [data]);
 
   return <div className={className}>
     {
