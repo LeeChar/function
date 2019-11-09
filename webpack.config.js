@@ -7,7 +7,7 @@ module.exports = {
     entry: resolve('./index.js'),
     output: {
         path: resolve('./'),
-        filename: 'bundle.[hash:6].js'
+        filename: 'bundle.js'
     },
     devtool: 'source-map',
     module: {
