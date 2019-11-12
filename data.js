@@ -1,1 +1,1 @@
-export default ["/**\n * 求和\n *\n * @export\n * @param {*} a\n * @param {*} b\n * @returns\n */-function add(a, b) {\n  a = a + 1;\n  b = b + 2;\n  return a + b;\n}","/**\n * 求差\n *\n * @export\n * @param {*} a\n * @param {*} b\n * @returns\n */-function add1(a, b) {\n  return a + b;\n}"];
+export default ["/**\n * 求和\n *\n * @param {*} a\n * @param {*} b\n * @returns\n */-function add(a, b) {\n  a = a + 1;\n  b = b + 2;\n  return a + b;\n}","/**\n * 求差\n *\n * @param {*} a\n * @param {*} b\n * @returns\n */-function cdd(a, b) {\n  return a + b;\n}"];
